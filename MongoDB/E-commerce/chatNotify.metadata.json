@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"E-Commerce.chatNotify"}],"uuid":"ee9611f1ee7b4a3a8683848f7c8cee86"}

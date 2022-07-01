@@ -1,0 +1,50 @@
+<footer id="footer"><!--Footer-->
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="companyinfo">
+            <h2><span>e</span>-shopper</h2>
+            <h5>Khóa luận tốt nghiệp đề tài: "Ứng dụng công nghệ Blockchain vào website thương mại điện tử".</h5>
+          </div>
+        </div>
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+          <div class="address">
+            <div class="col-sm-11">
+              <img src="/images/home/map.png" alt="" />
+            </div>
+            <p>ĐẠI HỌC QUỐC GIA THÀNH PHỐ HỒ CHÍ MINH
+            TRƯỜNG ĐẠI HỌC CÔNG NGHỆ THÔNG TIN</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</footer><!--/Footer-->
+
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.scrollUp.min.js"></script>
+<script src="/js/price-range.js"></script>
+<script src="/js/jquery.prettyPhoto.js"></script>
+<script src="/js/header-active.js"></script>
+<script src="/js/main.js"></script>
+
+<% if (user) { %>
+  <script>
+    $(function() {
+      $.ajax({
+        url: '/get-header-count',
+        method: 'GET',
+        success: function (response) {
+          document.getElementById("wishListCount").innerText = response.wishListCount || '';
+          document.getElementById("chatCount").innerText = response.chatCount || '';
+          document.getElementById("cartCount").innerText = response.cartCount || '';
+				}
+      })
+    })
+  </script>
+<% } %>

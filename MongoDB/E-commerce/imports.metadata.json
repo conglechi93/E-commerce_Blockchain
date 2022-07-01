@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"E-Commerce.imports"}],"uuid":"81fa301fbf7a404aabe5da4654dd90d5"}

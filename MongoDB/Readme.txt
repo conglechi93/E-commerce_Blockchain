@@ -1,0 +1,1 @@
+mongorestore --drop -d <database_will_be_restored> <location_to_folder_containing_mongodb_database>
