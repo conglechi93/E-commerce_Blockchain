@@ -162,8 +162,8 @@ router.post('/signup', (req, res) => {
             const mailOptions = {
                 from: 'eshop.blockchain@gmail.com',
                 to: doc.email,
-                subject: 'Code activate E-Shopper',
-                text: `Xin chào ${doc.lastName} ${doc.firstName}, chào mừng bạn đến với E-Shopper. Vui lòng kích hoạt tài khoản.\nMã kích hoạt của bạn là:\n${verificationCode}` + '\nhttp://localhost:8080/code-activated/' + doc.username,
+                subject: 'Code activate B-Shop',
+                text: `Xin chào ${doc.lastName} ${doc.firstName}, chào mừng bạn đến với B-Shop. Vui lòng kích hoạt tài khoản.\nMã kích hoạt của bạn là:\n${verificationCode}` + '\nhttp://localhost:8080/code-activated/' + doc.username,
             };
             transporter.sendMail(mailOptions, async function(error, info){
                 if (error) {
@@ -206,8 +206,8 @@ router.post('/code-forgot', urlencodedParser, (req, res) => {
         const mailOptions = {
             from: 'eshop.blockchain@gmail.com',
             to: email,
-            subject: 'Reset Password E-Shopper',
-            text: 'Xin chào ' + email + ', Chúng tôi đã nhận được yêu cầu đặt lại mật khẩu E-Shopper của bạn.\nMã đặt lại mật khẩu sau đây:\n' + verificationCode + '\nhttp://localhost:8080/code-forgot/' + acc.username,
+            subject: 'Reset Password B-Shop',
+            text: 'Xin chào ' + email + ', Chúng tôi đã nhận được yêu cầu đặt lại mật khẩu B-Shop của bạn.\nMã đặt lại mật khẩu sau đây:\n' + verificationCode + '\nhttp://localhost:8080/code-forgot/' + acc.username,
         };
         transporter.sendMail(mailOptions, async function(error, info){
             if (error) {
@@ -316,8 +316,8 @@ router.post('/code-activated/resend-email/:username', (req, res) => {
         const mailOptions = {
             from: 'eshop.blockchain@gmail.com',
             to: email,
-            subject: 'Code activate E-Shopper',
-            text: 'Xin chào ' + email + ', Chào mừng bạn đến với E-Shopper. Vui lòng kích hoạt tài khoản.\nMã kích hoạt của bạn là:\n' + verificationCode + '\n http://localhost:8080/code-activated/' + acc.username,
+            subject: 'Code activate B-Shop',
+            text: 'Xin chào ' + email + ', Chào mừng bạn đến với B-Shop. Vui lòng kích hoạt tài khoản.\nMã kích hoạt của bạn là:\n' + verificationCode + '\n http://localhost:8080/code-activated/' + acc.username,
         };
         transporter.sendMail(mailOptions, async function(error, info){
             if (error) {
